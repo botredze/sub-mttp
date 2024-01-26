@@ -23,8 +23,8 @@ jobs:
           npm ci
 
       - name: Install Dependencies  
-          run: |
-          npm run buil
+        run: |
+          npm run build
 
   deploy:
     runs-on: ubuntu-latest
