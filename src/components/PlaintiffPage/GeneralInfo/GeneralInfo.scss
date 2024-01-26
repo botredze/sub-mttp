@@ -1,0 +1,35 @@
+.generalInfo {
+  padding: 20px 10px 10px 10px;
+  border-radius: 8px;
+  form {
+    .blockSelects {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin: 10px 0 20px;
+      > div {
+        width: 100%;
+        > div {
+          width: 100%;
+        }
+      }
+    }
+    .blockCheckBox {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      
+      > input {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+      > label {
+        margin: 0 0 0 10px;
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+}

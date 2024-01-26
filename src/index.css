@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+.mainBlock,html {
+  background: #f9fafd;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+
+.activeBtns {
+  background-color: #4650dd !important;
+  color: #fff !important;
+}
+.plaintiFilling__container {
+  border-radius: 10px;
+  padding: 5px 0px;
+  /* max-width: 1000px; */
+  width: 50%;
+  /* min-width: 600px; */
+  position: relative;
+  height: 87vh;
+}
+
+.noneData {
+  display: none;
+}
+.viewData {
+  display: block;
+}
+
+.required {
+  color: red;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 0 5px;
+}
