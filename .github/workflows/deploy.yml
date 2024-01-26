@@ -11,12 +11,9 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v16  # Обновленная версия setup-node
+        uses: actions/setup-node@v5
         with:
-          node-version: '16'  # Или другая нужная версия
+          node-version: '20'
 
       - name: Install Dependencies and Build
         run: |
@@ -35,3 +32,4 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "build/"
           target: "/mttp-site/build"
+
