@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 10.x, 12.x, 14.x, 20.x, 18.x ]
+        node-version: [10.x, 12.x, 14.x, 20.x, 18.x]
 
     steps:
       - name: Get Code Repository
@@ -20,16 +20,13 @@ jobs:
       - name: Setup Nodejs
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: ${{ matrix.node-version }}
           persist-credentials: false
+
       - name: Install Dependencies
-        run: |
-          npm install
+        run: npm install
 
       - name: Build
-        with:
-          node-version: '20'
-          persist-credentials: false
         run: npm build
 
   deploy:
@@ -44,4 +41,3 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "build/"
           target: "/mttp-site/build"
-
