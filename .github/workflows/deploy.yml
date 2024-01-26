@@ -9,6 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [ 10.x, 12.x, 14.x, 20.x, 18.x ]
+
     steps:
       - name: Get Code Repository
         uses: actions/checkout@v3
@@ -23,6 +27,9 @@ jobs:
           npm install
 
       - name: Build
+        uses: actions/setup-node@v4
+        with:
+            node-version: ${{ matrix.node-version }}
         run: |
           npm run build
 
