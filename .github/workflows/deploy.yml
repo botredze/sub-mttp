@@ -25,7 +25,12 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install
-          npm run build
+
+      - name: Build
+        with:
+          node-version: '20'
+          persist-credentials: false
+        run: npm build
 
   deploy:
     runs-on: ubuntu-latest
