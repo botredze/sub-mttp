@@ -46,7 +46,7 @@ jobs:
           username: root
 #          key: ${{ secrets.SERVER_SSH_KEY }}
           port: 5028
-          passphrase: Afina954120
+          password: Afina954120
           source:  "deploy.tar"
           target: "/mttp-site/"
           tar_dereference: true
