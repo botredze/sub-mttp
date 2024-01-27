@@ -44,7 +44,7 @@ jobs:
         with:
           host: 217.29.18.150
           username: root
-          key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/h1nslrXfcERmmieiwSPRMEkkLrjqVjClSn4TLEBlCXTspJIYtcmvgBhTuLuahJlIVO9Szh/E+8ojEhtvsuIgk3c67QSjdBognhJJNOYooRzm3s/wUQWv103FZg5vkrcd3E8LuQOpHBjWVvNe+PUNvnJED1PnlFMf02BB/S9nQIjKQsX8IzMkWZtZNfkVPc1wjMcbINKh7Uc3bOw0AzViJLe1aU383V4Xy88XdSIkmSkA3zaDyitXfmylkuMPpJdSzVYW4aWrCe1byLkWK72vxYcEWyg4nLvUDWb2oTrWwF/7spy019RwhYCaM505TxSp9Lf7j7BxXZCT/xBLtfgh root@mttp-chairman
+#          key: ${{ secrets.SERVER_SSH_KEY }}
           port: 5028
           passphrase: Afina954120
           source:  "deploy.tar"
