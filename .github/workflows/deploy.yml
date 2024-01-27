@@ -35,6 +35,7 @@ jobs:
     steps:
       - name: Create deploy tar file
         run: |
+          ls -la
           mkdir ../build
           cp -TR . ../build
           tar -cvf deploy.tar ../build/
@@ -44,7 +45,6 @@ jobs:
         with:
           host: 217.29.18.150
           username: root
-#          key: ${{ secrets.SERVER_SSH_KEY }}
           port: 5028
           password: Afina954120
           source:  "deploy.tar"
