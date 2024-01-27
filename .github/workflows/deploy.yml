@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Create Tar file
+      - name: Create deploy tar file
         run: |
           mkdir ../build
           cp -TR . ../build
