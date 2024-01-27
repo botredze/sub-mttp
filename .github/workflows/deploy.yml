@@ -15,10 +15,10 @@ jobs:
 
     steps:
       - name: Get Code Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
 
       - name: Setup Nodejs
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -28,6 +28,7 @@ jobs:
       - name: Build
         run: |
           CI=false npm run build
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -36,11 +37,13 @@ jobs:
         run: |
           ls -al ${{ inputs.source }}
 
-      - name: Copy Build to Server
+      - name: Copy Build to Server via SSH
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           source:  ${{ inputs.source }}
           target: "/mttp-site/build"
