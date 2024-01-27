@@ -62,7 +62,7 @@ jobs:
           script: |
             whoami
             ls -la 
-            cd mttp-site
+            cd ~/mttp-site
             ls -la
             tar -xvf deploy.tar
             systemctl restart nginx
