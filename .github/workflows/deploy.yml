@@ -52,6 +52,20 @@ jobs:
           tar_dereference: true
           rm: true
 
+      - name: Unzip build tar file
+        uses: appleboy/ssh-action@maste
+        with:
+          host: 217.29.18.150
+          username: root
+          port: 5028
+          password: Afina954120
+          script: |
+            whoami
+            ls -la 
+            cd mttp-site
+            ls -la
+            tar -xvf deploy.tar
+            systemctl restart nginx
 
 
 #          host: ${{ secrets.SERVER_HOST }}
