@@ -45,5 +45,6 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.PORT }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          source:  '/build'
+          source:  'build/'
+          strip_components: 1
           target: "/mttp-site/build"
