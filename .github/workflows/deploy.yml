@@ -53,7 +53,7 @@ jobs:
           rm: true
 
       - name: Unzip build tar file
-        uses: appleboy/ssh-action@maste
+        uses: appleboy/ssh-action@master
         with:
           host: 217.29.18.150
           username: root
