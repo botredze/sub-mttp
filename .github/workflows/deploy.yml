@@ -45,5 +45,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.PORT }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          source:  distfiles/*
-          target: "/mttp-site/build"
+          source:  'build/*'
+          target: "/mttp-site/"
+          tar_dereference: true
+          rm: true
