@@ -45,7 +45,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.PORT }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          source:  'build/*'
+          source:  'home/runner/work/sub-mttp/sub-mttp/build/*'
           target: "/mttp-site/"
           tar_dereference: true
           rm: true
